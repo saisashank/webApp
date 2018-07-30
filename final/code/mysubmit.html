@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Search a wine</title>
+
+
+<style type="text/css">
+	
+body{
+margin:0px;
+background-color:silver;
+}
+
+#main{
+position:absolute;
+background-color:silver;
+
+width:100%;
+height:100%
+}
+
+#header{
+background-color:orange;
+width:100%;
+margin:0px;
+height:70px;
+
+}
+
+#slider{
+	
+        position:relative;
+        
+	}
+.Age{
+	
+        position:relative;
+        top:15px;
+right:15px;
+	}
+.Age1{
+	
+        position:relative;
+        top:15px;
+left:1px;
+	}
+#sliderAmount{
+ position:relative;
+ left:189px;
+bottom:25px;
+
+}
+.register{
+position:absolute;
+left:500px;
+top:100px;
+
+}
+#timer{
+position:absolute;
+left:750px;
+top:80px;
+}
+.major{
+position:relative;
+left:36px;
+
+}
+.major1{
+position:relative;
+right:36px;
+
+
+}
+.radio{
+position:relative;
+left:36px;
+
+
+}
+
+.head{
+position:relative;
+top:20px;
+font-size:20px;
+
+}
+
+.code{
+position:relative;
+left:5px;
+}
+
+
+
+</style>
+
+
+<script type="text/javascript">
+function validateindividual(inputtxt) {
+
+ var fuserid = document.forms["myForm"]["UserId"].value;
+var letters = /^[a-zA-Z]{2}[0-9]{6}$/;
+if(inputtxt.value.match(letters))
+{
+alert('User Id is valid');
+return true;
+}
+else
+{
+if(!letters.test(fuserid)){
+		alert("Enter valid userID. You entered " +fuserid);
+		document.getElementById("errorBox1").innerHTML = "enter the valid userID. You entered " +fuserid;
+		return false;
+	 }
+//check(inputtxt);
+/*alert('Please enter valid User Id');           //This part also works
+document.getElementById("errorBox1").innerHTML = "Please Enter valid User Id";
+
+return false;*/
+}
+}
+</script>
+</p><p id="Box1"></p><p id="Box2"></p>
+<script type="text/javascript">
+function check(s){
+	var val = new String();
+	/*var a = val.slice(0,1);
+	var h = a.charCodeAt(0);
+	var b = val.slice(1,2);
+	var i = b.charCodeAt(1);
+	var c = val.slice(2,3);
+	var j = c.charCodeAt(2);
+	var d = val.slice(3,4);
+	var k = s.charCodeAt(3);
+	var e = val.slice(4,5);
+	var l = s.charCodeAt(4);
+	var f = val.slice(5,6);
+	var m = s.charCodeAt(5);
+	var g = val.slice(6,7);
+	var n = s.charCodeAt(6);
+	var o = val.slice(6,7);
+	var p = s.charCodeAt(6);
+	
+	if()*/
+	
+	var val = inputtxt.split('');
+
+alert("error");
+
+document.getElementById("Box1").innerHTML =val[0]+val[1]+val[2];
+document.getElementById("Box2").innerHTML =val[3]+val[4]+val[5]+val[6]+val[7];
+	return false;
+
+
+}
+
+
+
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+function validateForm() {
+
+
+    var fuserid = document.forms["myForm"]["UserId"].value,
+		fdateofbirth = document.forms["myForm"]["DateofBirth"].value;
+	document.getElementById("errorBox").innerHTML ="";
+     document.getElementById("resultBday").innerHTML ="";
+
+    if (fuserid == "") {
+		alert("Enter User Id");
+		document.getElementById("errorBox").innerHTML = "Please Enter User Id";
+        return false;
+    }
+	if (fdateofbirth == "") {
+		alert("Enter Date of Birth");
+		document.getElementById("resultBday").innerHTML = "Please Enter Date of Birth";
+        return false;
+		}
+	
+}
+
+</script>
+<script type="text/javascript">
+function submitBday() {
+    var Q4A = "Your birthday is: ";
+    var Bdate = document.getElementById('bday').value;
+    var Bday = +new Date(Bdate);
+    Q4A += Bdate + ". You are " + ~~ ((Date.now() - Bday) / (31557600000));
+    var age=~~ ((Date.now() - Bday) / (31557600000));
+    var theBday = document.getElementById('resultBday');
+    theBday.innerHTML = Q4A;
+    give(age);
+}
+function give(a){
+	document.getElementById("myText").value = a;
+}
+   
+</script>
+
+</head>
+
+
+
+<body onload='document.myForm.UserId.focus()'>
+<div id="header">
+<label class="head"><center>Registration</center></label>
+</div>
+<center>
+<div id="main">
+
+<div class="register">
+<p class="title" style="padding:2px;">REGISTRATION</p>
+
+<form name="myForm" action="cgi-bin/submit.cgi"	onsubmit="return validateForm();"
+method="post">																		
+ 
+ 
+
+<label class="Age" >User Id:
+
+<p id="errorBox"></p><p id="errorBox1"></p><p id="errorBox2">
+<input type="text" name="UserId" value="" placeholder="" size="8" maxlength="8" ><br>
+
+
+<label class="Age1" >Birthday:
+
+<p id="resultBday"></p>
+<input type="date" name="DateofBirth" id="bday" onchange="submitBday()">
+
+
+<input type="hidden" name="age" id="myText" value="">
+
+<br><br><p id="errorBox1"></p>
+<input type="submit" name="submit" value="Submit" onclick="return validateindividual(document.myForm.UserId);">
+</form>
+
+</div><center>
+</body>
+</html>

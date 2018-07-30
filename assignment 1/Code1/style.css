@@ -1,0 +1,106 @@
+body{
+  background: url(backside.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#maincontainer{
+width:960px;
+heigth:auto;
+margin-top:40px;
+margin: 0 auto;
+}
+
+
+#header{
+height:150px;
+background-color: #fff;
+width:960px;
+margin:0 auto;
+}
+#header-cont{
+width:960px;
+top:0px;
+background-color:#fff;
+margin: 0 auto;
+}
+
+.logo{
+float:left;
+padding-top:25px;
+padding-left:8px;
+}
+.logo1{
+float:left;
+padding-top:38px;
+padding-right:12px;
+padding-left:14px;
+}
+
+.logo2{
+float:left;
+padding-left:22px;
+}
+
+div.horizontal
+{
+width:100%;
+height:10px;
+background-color:#98bf21;
+}
+div.horizontal ul
+{
+list-style-type:none;
+margin:0;
+padding:0;
+}
+div.horizontal li
+{
+float:left;
+}
+div.horizontal a
+{
+display:block;
+width:98px;
+}
+div.horizontal a:link,div.horizontal a:visited
+{
+font-weight:bold;
+color:#FFFFFF;
+background-color:#98bf21;
+text-align:center;
+padding:4.25px;
+text-decoration:none;
+text-transform:uppercase;
+}
+div.horizontal a:hover,div.horizontal a:active
+{
+background-color:#7A991A;
+}
+
+
+#home{
+
+width:960px;
+height:900px;
+background-color:white;
+position:relative;
+margin-top:17px;
+}
+
+#video{
+position:absolute;
+right:100px;
+bottom:600px;
+}
+#hotels{
+position:absolute;
+top:350px;
+left:670px;
+}
+a{
+color:black;
+}

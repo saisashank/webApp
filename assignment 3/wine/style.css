@@ -1,0 +1,90 @@
+body{
+  background: url(backside.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+#maincontainer{
+width:960px;
+heigth:auto;
+margin-top:20px;
+margin: 0 auto;
+position:relative;
+}
+
+
+#header{
+height:250px;
+background-color: #fff;
+width:960px;
+margin:0 auto;
+}
+#header-cont{
+width:960px;
+top:0px;
+background-color:#fff;
+margin: 0 auto;
+}
+
+.logo{
+float:left;
+height:150px;
+width:105px;
+padding-top:25px;
+padding-left:8px;
+}
+.logo1{
+float:left;
+height:150px;
+width:160px;
+padding-top:42px;
+padding-right:6px;
+}
+
+.logo2{
+float:left;
+padding-left:22px;
+}
+
+div.horizontal
+{
+width:1000px;
+height:10px;
+position:absolute;
+
+z-index:1;
+margin-top:-16px;
+right:1px;
+}
+
+#home{
+
+width:960px;
+height:auto;
+background-color:white;
+position:absolute;
+
+}
+
+#video{
+position:absolute;
+right:10px;
+bottom:600px;
+}
+#hotels{
+position:absolute;
+top:350px;
+left:670px;
+}
+#game{
+position:absolute;
+top:550px;
+left:670px;
+}
+
+a{
+color:black;
+}

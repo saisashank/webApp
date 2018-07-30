@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="draw.css" />
+<style type = "text/css">
+ #canvas { width: 400px;
+height:50px;
+ border: 1px solid #999999;
+border-collapse: collapse;
+position:relative;
+top:50px;
+left:15px;
+
+}
+ td { width: 4px;
+ height: 4px }
+ th.key { font-family: arial, helvetica, sans-serif;
+ font-size: 12px;
+ border-bottom: 1px solid #999999 }
+</style>
+<script type = "text/javascript">
+<!--
+//initialization function to insert cells into the table
+ function createCanvas ()
+ {
+ var side = 100;
+var tbody = document.getElementById( "tablebody" );
+ for ( var i = 0; i < side; i++ )
+ {
+ var row = document.createElement( "tr" );
+
+for ( var j = 0; j < side; j++ )
+ {
+var cell = document.createElement( "td" );
+cell.onmousemove = processMouseMove;
+row.appendChild( cell );
+} // end for
+
+ tbody.appendChild( row );
+ } // end for
+
+ } // end function createCanvas
+
+// processes the onmousemove event
+function processMouseMove( e )
+ {
+// get the event object from IE 
+
+if ( !e )
+var e = window.event;
+
+ // turn the cell blue if the Ctrl key is pressed
+ if ( e.ctrlKey )
+ this.style.backgroundColor = "blue";
+
+// turn the cell red if the Shift key is pressed
+ if ( e.shiftKey )
+ this.style.backgroundColor = "red";
+ } // end function processMouseMove
+ // -->
+ </script>
+
+
+</head>
+<body onload = "createCanvas()">
+<div id="maincontainer"> <!--/container-->
+
+<div id="header-cont"> <!--header-cont-->
+<div id="header"> <!--header-->
+ <img class="logo" src="logo.png" alt="Club Logo" height="104" width="107">
+<img class="logo1" src="logo1.png" alt="Club Logo1" height="104" width="120">
+<img class="logo2" src="logo2.jpg" alt="Club Logo2" height="150" width="657">   
+</div> <!--/header-->
+
+<div class="horizontal">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="records.html">RECORDS</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="rgi.html">STADIUM</a></li>
+<li><a href="Selectors.html">SELECTORS</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+</div> <!--/header-cont-->
+
+<div id="home"> <!--home-->
+
+<p class="title" style="padding:2px;background-color:green; width:935px;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paint</p>
+
+<table id = "canvas" class = "canvas"><tbody id = "tablebody">
+<tr><th class = "key" colspan = "100">Hold <tt>ctrl</tt>
+to draw blue. Hold <tt>shift</tt> to draw red.</th></tr>
+</tbody></table>
+
+</div> <!--/home-->
+
+</div> <!--/maincontainer-->
+
+</body>
+</html>

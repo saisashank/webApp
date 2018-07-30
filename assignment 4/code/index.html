@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+<style type="text/css">
+  ul {list-style: none;padding: 0px;margin: 0px;}
+  ul li {display: block;position: relative;float: left;border:1px solid #fff}
+  li ul {display: none;}
+  ul li a {display: block;background: #98bf21;padding: 10px 30px 10px 10px;text-decoration: none;
+           white-space: nowrap;color: #fff;}
+  ul li a:hover {background: #98bf21;}
+  li:hover ul {display: block; position: absolute;padding-left:0px;padding-top:2px;}
+  li:hover li {float: none;}
+  li:hover a {background: #98bf21;}
+  li:hover li a:hover {background: #000;}
+  #drop-nav li ul li {border-top: 0px;}
+</style>
+
+</style>
+
+
+
+
+
+
+
+
+
+    <script type = "text/javascript">
+ <!--
+ // variables used to test the state of the game
+ var WON = 0;
+ var LOST = 1;
+ var CONTINUE_ROLLING = 2;
+
+ // other variables used in program
+ var firstRoll = true; // true if current roll is first
+ var sumOfDice = 0; // sum of the dice
+ var myPoint = 0; // point if no win/loss on first roll
+ var gameStatus = CONTINUE_ROLLING; // game not over yet
+
+ // process one roll of the dice
+ function play()
+ {
+ // get the point field on the page
+ var point = document.getElementById( "pointfield" );
+
+ // get the status div on the page
+ var statusDiv = document.getElementById( "status" );
+ if ( firstRoll ) // first roll of the dice
+ {
+ sumOfDice = rollDice();
+
+ switch ( sumOfDice )
+ {
+ case 7: case 11: // win on first roll
+ gameStatus = WON;
+ // clear point field
+ point.value = "";
+ break;
+ case 2: case 3: case 12: // lose on first roll
+ gameStatus = LOST;
+ // clear point field
+ point.value = "";
+ break;
+ default: // remember point
+ gameStatus = CONTINUE_ROLLING;
+ myPoint = sumOfDice;
+ point.value = myPoint;
+ firstRoll = false;
+ } // end switch
+ } // end if
+ else
+ {
+ sumOfDice = rollDice();
+
+ if ( sumOfDice == myPoint ) // win by making point
+ gameStatus = WON;
+ else
+ if ( sumOfDice == 7 ) // lose by rolling 7
+ gameStatus = LOST;
+ } // end else
+
+ if ( gameStatus == CONTINUE_ROLLING )
+ statusDiv.innerHTML = "Roll again";
+ else
+ {
+ if ( gameStatus == WON )
+ statusDiv.innerHTML = "Player wins. " +
+ "Click Roll Dice to play again.";
+ else
+statusDiv.innerHTML = "Player loses. " +
+ "Click Roll Dice to play again.";
+
+ firstRoll = true;
+ } // end else
+ } // end function play
+
+ // roll the dice
+ function rollDice()
+ {
+ var die1;
+ var die2;
+ var workSum;
+
+ die1 = Math.floor( 1 + Math.random() * 6 );
+ die2 = Math.floor( 1 + Math.random() * 6 );
+ workSum = die1 + die2;
+
+ document.getElementById( "die1field" ).value = die1;
+ document.getElementById( "die2field" ).value = die2;
+ document.getElementById( "sumfield" ).value = workSum;
+
+ return workSum;
+} // end function rollDice
+ // -->
+ </script>
+ 
+<script type="text/javascript">
+<!-->
+var image1=new Image()
+image1.src="logo2.jpg"
+var image2=new Image()
+image2.src="1.jpg"
+var image3=new Image()
+image3.src="2.png"
+//-->
+</script>
+
+
+</head>
+<body>
+<div id="maincontainer"> <!--/container-->
+
+<div id="header-cont"> <!--header-cont-->
+
+<div id="header"> <!--header-->
+ <img class="logo" src="logo.png" alt="Club Logo" height="104" width="107">
+<img class="logo1" src="logo1.png" alt="Club Logo1" height="104" width="120">
+<div id="slideshow">
+<img src="1.jpg" name="slide" width="679" height="150">  
+<script type="text/javascript">
+<!--
+var step=1
+function slideit(){
+document.images.slide.src=eval("image"+step+".src")
+if(step<3)
+step++
+else
+step=1
+setTimeout("slideit()",2500)
+}
+slideit()
+//-->
+</script>
+</div>
+  
+</div> <!--/header-->
+
+<div class="horizontal">
+<ul id="drop-nav">
+  <li><a href="index.html">Home</a></li>
+<li><a href="news.html">NEWS</a>
+    <ul>
+      <li><a href="craps.html">Craps Game</a></li>
+      <li><a href="draw.html">Draw</a></li>
+      <li><a href="draw1.html">Sketch</a></li>
+      
+    </ul>
+  </li>
+    <li><a href="records.html">RECORDS</a>
+    <ul>
+      <li><a href="#">Joomla</a></li>
+      <li><a href="#">Drupal</a></li>
+      <li><a href="#">WordPress</a></li>
+      <li><a href="#">Concrete 5</a></li>
+    </ul>
+  </li>
+<li><a href="login.html">LOGIN</a></li>
+<li><a href="register.html">REGISTER</a></li>
+<li><a href="rgi.html">STADIUM</a></li>
+  <li><a href="Selectors.html">SELECTORS</a>
+    <ul>
+      <li><a href="tic.html">Tic Tac Toe</a></li>
+      <li><a href="events.html">Events</a></li>
+    </ul>
+  </li>
+<li><a href="about.html">ABOUT</a>
+<ul>
+      <li><a href="location.html">Location Map</a></li>
+</ul>
+</li>
+<li><a href="contact.html">CONTACT</a></li>
+
+</ul>
+
+</div>
+
+</div> <!--/header-cont-->
+
+
+<div id="home"> <!--home-->
+<b>Players </b> <br>
+First-Team Squad <br>
+As of PHL 4 - 2008. <br>
+ <table width="25%"  cellpadding="1" style="float:left" border="1">
+ <tr>
+	<th> Name </th>
+	<th> Country</th>
+</tr>
+ <tr>
+	<td> Tushar Khandekar (Captain)	</td>
+	<td>India</td>
+ </tr>
+  <tr>
+	<td> Bharath Kumar Chhetri (Goal Keeper)	</td> 
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Len Aiyappa	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> P T RAO (Goal Keeper)	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Ajay Kumar Saroha	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Arjun Halappa	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td>Vinaya V.S	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Bimal Lakra	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Vikram Kanth	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Cheeyanna	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Hari Prasad	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> S. V. Sunil	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> K.A.Nilesh	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Kamarjit Singh	</td>
+	<td>India</td>
+ </tr>
+ <tr>
+	<td> Olivier Rutgers	</td>
+	<td>Netherlands</td>
+ </tr>
+ <tr>
+	<td> Sebastian Westerhout	</td>
+	<td>Netherlands</td>
+ </tr>
+ <tr>
+	<td> Hyo Kim	</td>
+	<td>South Korea</td>
+ </tr>
+ 
+</table>
+<table >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<tr>
+	<th> Other Important Team Personnel</th>
+</tr>
+<tr>
+	<td> 1. Ramesh Parameswaran (Chief Coach)-India</td>
+</tr>
+<tr>
+	<td> 2. Ashish Ballal (Asst. Coach)-India</td>
+</tr>
+
+<tr>
+	<td> 3. Kannan Krishnamurthy (General Manager)-India</td>
+</tr>
+<tr>
+	<td> 4. Poonacha C.S (Trainer)-India</td>
+</tr>
+
+
+</table>
+<video class="video" controls width="25%" height="25%" border="2">
+
+<source src="Danraj Pillay.mp4" type="video/mp4">
+Your video does not support the format
+</video>
+
+</div>
+
+<div id="game">
+
+ 
+ 
+   <form action = "">
+ <table>
+ <caption>Craps</caption>
+ <tr><td>Die 1</td>
+ <td><input id = "die1field" type = "text" />
+</td></tr>
+ <tr><td>Die 2</td>
+ <td><input id = "die2field" type = "text" />
+ </td></tr>
+ <tr><td>Sum</td>
+ <td><input id = "sumfield" type = "text" />
+ </td></tr>
+ <tr><td>Point</td>
+ <td><input id = "pointfield" type = "text" />
+ </td></tr>
+<tr><td /><td><input type = "button" value = "Roll Dice"
+onclick = "play()" /></td></tr>
+ </table>
+ <div id = "status" class = "red">
+ Click the Roll Dice button to play</div>
+ </form>
+
+
+</div>
+
+
+
+
+
+
+
+</div> <!--/home-->
+
+</div> <!--/maincontainer-->
+
+</body>
+</html>

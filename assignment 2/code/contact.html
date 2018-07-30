@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="contact.css" />
+
+<script>
+function myFunction() {
+    var index;
+    var text = "<ul>";
+    var address = ["<b>Administration: </b>","Karnataka State Hockey Association", "Bangalore Hockey Stadium,", "Rhenius Street, Langford Town,", "Bengaluru, Karnataka 560025, India","Email: ksha@vsnl.net","Tel: 08042443701","Phone: +91 80 2227 7373 "];
+    for (index = 0; index < address.length; index++) {
+        text += "<li>" + address[index] + "</li>";
+    }
+    text += "</ul>";
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+<style>
+#ad{
+position:relative;
+top:70px;
+left:30px;
+}
+#demo{
+position:relative;
+top:60px;
+
+}
+</style>
+
+</head>
+<body>
+<div id="maincontainer"> <!--/container-->
+
+<div id="header-cont"> <!--header-cont-->
+<div id="header"> <!--header-->
+<img class="logo" src="logo.png" alt="Club Logo" height="104" width="107">
+<img class="logo1" src="logo1.png" alt="Club Logo1" height="104" width="120">
+<img class="logo2" src="logo2.jpg" alt="Club Logo2" height="150" width="657"> 
+</div> <!--/header-->
+
+<div class="horizontal">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="records.html">RECORDS</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="rgi.html">STADIUM</a></li>
+<li><a href="Selectors.html">SELECTORS</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+</div> <!--/header-cont-->
+
+<div id="home"> <!--home-->
+
+<p class="title" style="padding:2px;background-color:green; width:935px;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KSHA OFFICES</p>
+
+<button onclick="myFunction()" id="ad">Get Address</button>
+<br>
+<br>
+
+<p id="demo"></p>
+<br><br><br>
+
+<img src="contact.png" alt="Club Logo" height="300" width="300">
+
+
+</p>
+
+
+</div> <!--/home-->
+
+</div> <!--/maincontainer-->
+
+</body>
+</html>

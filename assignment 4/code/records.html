@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="records.css" />
+
+
+<script type="text/javascript">
+<!--------------------Alternate rows diferent color javascript ---------------------->
+function alternate(id){ 
+
+  if(document.getElementsByTagName)
+  {  
+    var table = document.getElementById(id);   
+    var rows = table.getElementsByTagName("tr");   
+
+    for(i = 0; i < rows.length; i++)
+	{           
+      if(i % 2 == 0)
+	  { 
+       rows[i].className = "odd"; 
+      }
+	  else
+	  { 
+       rows[i].className = "even"; 
+      }       
+    } 
+
+  }
+}
+
+</script> 
+
+<style type="text/css">
+
+
+.odd{background-color: CornflowerBlue ;} 
+
+  .even{background-color: Aqua ;} 
+  #table3 {
+	background-color: #3b5998 ;
+	color: #FDFDFD;
+	width: 725px;
+	height: 50px;
+	
+}
+-->
+</style><!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]--></head>
+
+<body onload = "alternate('table4')">
+</head>
+<body>
+<div id="maincontainer"> <!--/container-->
+<div id="header-cont"> <!--header-cont-->
+<div id="header"> <!--header-->
+ <img class="logo" src="logo.png" alt="Club Logo" height="104" width="107">
+<img class="logo1" src="logo1.png" alt="Club Logo1" height="104" width="120">
+<img class="logo2" src="logo2.jpg" alt="Club Logo2" height="150" width="657">   
+</div> <!--/header-->
+
+<div class="horizontal">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="news.html">News</a></li>
+<li><a href="records.html">RECORDS</a></li>
+<li><a href="login.html">Login</a></li>
+<li><a href="register.html">Register</a></li>
+<li><a href="rgi.html">STADIUM</a></li>
+<li><a href="Selectors.html">SELECTORS</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+</div> <!--/header-cont-->
+
+
+<div id="home"> <!--home-->
+
+<p class="title" style="padding:2px;background-color:green; width:935px;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Bangalore Hi-fliers Season By Season Performance</p>
+
+<details class="records">
+ &nbsp;&nbsp;&nbsp;&nbsp; <summary><b>Team Records:</b></summary><br><br>
+
+
+
+<table style="width:450px" id="table4" width=100% border="1" cellpadding="4" >
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+<tr>
+	<th> Season </th>
+	<th> Played </th>
+	<th> Won </th>
+	<th> Draw </th>	
+	<th> Lost </th>	
+	<th> ETW </th>	
+	<th> ETL </th>	
+	<th> GF </th>	
+	<th> GA </th>	
+	<th> GD </th>	
+	<th> POINTS </th>	
+	<th> POSITION </th>		
+</tr>
+<tr>
+	<td> 2005 </td>
+	<td> 8 </td>
+	<td> 3 </td>
+	<td> 0 </td>
+	<td> 5 </td>
+	<td> - </td>
+	<td> - </td>
+	<td> 19 </td>
+	<td> 22 </td>
+	<td> -3 </td>
+	<td> 9 </td>
+	<td> Fourth </td>	
+</tr>
+<tr>
+	<td> 2006 </td>
+	<td> 8 </td>
+	<td> 5 </td>
+	<td> 0 </td>
+	<td> 3 </td>
+	<td> - </td>
+	<td> - </td>
+	<td> 16 </td>
+	<td> 12 </td>
+	<td> 4 </td>
+	<td> 13 </td>
+	<td> Second in league won Championship on play-offs </td>	
+</tr>
+<tr>
+	<td> 2007 </td>
+	<td> 12 </td>
+	<td> 5 </td>
+	<td> 0 </td>
+	<td> 4 </td>
+	<td> 2 </td>
+	<td> 1 </td>
+	<td> 24 </td>
+	<td> 26 </td>
+	<td> -2 </td>
+	<td> 20 </td>
+	<td> Third </td>	
+</tr>
+<tr>
+	<td> 2008 </td>
+	<td> 6 </td>
+	<td> 4 </td>
+	<td> 0 </td>
+	<td> 1 </td>
+	<td> 1 </td>
+	<td> 0 </td>
+	<td> 13 </td>
+	<td> 10 </td>
+	<td> 3 </td>
+	<td> 14 </td>
+	<td> Second in league won Championship on play-offs </td>	
+</tr>
+
+
+</table>
+</details>
+
+</div> <!--/home-->
+
+</div> <!--/maincontainer-->
+
+</body>
+</html>
+
+
+
+
+
+
